@@ -1387,14 +1387,6 @@ textarea.input {
     font-size: 3rem;
   }
 
-  .input-block {
-    width: 15.625rem;
-  }
-
-  .input-block--big {
-    width: 18.75rem;
-  }
-
   .input-block__input::-webkit-input-placeholder {
     font-size: 1rem;
   }
@@ -1575,14 +1567,6 @@ textarea.input {
 
   .main-block__title {
     font-size: 2rem;
-  }
-
-  .input-block {
-    width: 7.5rem;
-  }
-
-  .input-block--big {
-    width: 15rem;
   }
 
   .input-block__input::-webkit-input-placeholder {
@@ -2177,30 +2161,6 @@ textarea.input {
     }
 }
 
-@supports (width: clamp( 7.5rem , 5.0700934579rem  +  12.1495327103vw , 15.625rem )) {
-    .input-block {
-      width: clamp( 7.5rem , 5.0700934579rem  +  12.1495327103vw , 15.625rem );
-    }
-}
-
-@supports not (width: clamp( 7.5rem , 5.0700934579rem  +  12.1495327103vw , 15.625rem )) {
-    .input-block {
-      width: calc(7.5rem + 8.125 * (100vw - 20rem) / 66.875);
-    }
-}
-
-@supports (width: clamp( 15rem , 13.8785046729rem  +  5.6074766355vw , 18.75rem )) {
-    .input-block--big {
-      width: clamp( 15rem , 13.8785046729rem  +  5.6074766355vw , 18.75rem );
-    }
-}
-
-@supports not (width: clamp( 15rem , 13.8785046729rem  +  5.6074766355vw , 18.75rem )) {
-    .input-block--big {
-      width: calc(15rem + 3.75 * (100vw - 20rem) / 66.875);
-    }
-}
-
 @supports (font-size: clamp( 0.75rem , 0.6752336449rem  +  0.3738317757vw , 1rem )) {
     .input-block__input::-webkit-input-placeholder {
       font-size: clamp( 0.75rem , 0.6752336449rem  +  0.3738317757vw , 1rem );
@@ -2502,6 +2462,32 @@ textarea.input {
 @supports not (row-gap: clamp( 1.875rem , 1.6880841121rem  +  0.9345794393vw , 2.5rem )) {
     .menu__list {
       row-gap: calc(1.875rem + 0.625 * (100vw - 20rem) / 66.875);
+    }
+}
+}
+
+@media (min-width: 62em) and (max-width: 88.75em) {
+@supports (width: clamp( 12.5rem , 5.2570093458rem  +  11.6822429907vw , 15.625rem )) {
+    .input-block {
+      width: clamp( 12.5rem , 5.2570093458rem  +  11.6822429907vw , 15.625rem );
+    }
+}
+
+@supports not (width: clamp( 12.5rem , 5.2570093458rem  +  11.6822429907vw , 15.625rem )) {
+    .input-block {
+      width: calc(12.5rem + 3.125 * (100vw - 62rem) / 26.75);
+    }
+}
+
+@supports (width: clamp( 15rem , 6.308411215rem  +  14.0186915888vw , 18.75rem )) {
+    .input-block--big {
+      width: clamp( 15rem , 6.308411215rem  +  14.0186915888vw , 18.75rem );
+    }
+}
+
+@supports not (width: clamp( 15rem , 6.308411215rem  +  14.0186915888vw , 18.75rem )) {
+    .input-block--big {
+      width: calc(15rem + 3.75 * (100vw - 62rem) / 26.75);
     }
 }
 }
